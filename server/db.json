@@ -1,0 +1,44 @@
+{
+    "tickets": [
+        {
+            "confirmationNumber": "12445644",
+            "lastNames": [
+                "kumar",
+                "singh",
+                "bahadur",
+                "sharma"
+            ],
+            "flightDetails": {
+                "flightNumber": "1122",
+                "from": "Delhi",
+                "to": "Istanbul"
+            },
+            "passengers": [
+                {
+                    "name": "Rajat kumar",
+                    "SeatNumber":"22-C",
+                    "age":22,
+                    "checkedIn": false
+                },
+                {
+                    "name": "Rajat singh",
+                    "SeatNumber":"22-D",
+                    "age":23,
+                    "checkedIn": false
+                },
+                {
+                    "name": "Rajat bahadur",
+                    "SeatNumber":"22-E",
+                    "age":24,
+                    "checkedIn": false
+                },
+                {
+                    "name": "Rajat sharma",
+                    "SeatNumber":"22-F",
+                    "age":25,
+                    "checkedIn": false
+                }
+            ]
+        }
+    ]
+}
