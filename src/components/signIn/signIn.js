@@ -32,11 +32,8 @@ class Signin extends React.Component {
                     isError: true,
                     errorMessage: response.data.error
                 });
-            } else {
-                this.setState({
-                    ticketDetails: response.data,
-                    redirect: true
-                })
+            } else if(response.data) {
+                this.props.history.push('/viewdetails',{id:this.state.confirmationNumber});
             }
         }).catch(err => {
             console.log(err);
@@ -62,12 +59,9 @@ class Signin extends React.Component {
     render() {
         return (
             <div>
-                { this.state.redirect && <Redirect to={{
-                    pathname: '/viewdetails',
-                    state: this.state.ticketDetails
-                }} /> }
+                
                 {this.state.isError && <div className="error">{this.state.errorMessage}</div>}
-                <form method="post" action={`${config.host}${config.location}${config.fetchTicket}`} onSubmit={(event) => {
+                <form method="post" action={`${config.host}${config.location}${config.checkConfirmation}`} onSubmit={(event) => {
                     this.submitHandler(event);
                 }}>
                     <InputBlock type="text" label="Confirmation Number" name="confirmation-number" onChange={this.onChangeHandler} value={this.state.confirmationNumber} />

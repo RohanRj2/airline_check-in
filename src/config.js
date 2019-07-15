@@ -1,6 +1,8 @@
 const config = {
     "host" : "http://localhost:3000",
     "location": "/api",
-    "fetchTicket":"/fetchTicket"
+    "checkConfirmation": "/checkConfirmation",
+    "fetchTicket":"/fetchTicket",
+    "submitCheckin":"/submitCheckin"
 }
 export default config;

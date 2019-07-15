@@ -1,18 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import signIn from "./components/signIn/signIn";
-import ticketDetails from "./components/ticketDetails/ticketDetails";
+import SignIn from "./components/signIn/signIn";
+import TicketDetails from "./components/ticketDetails/ticketDetails";
+import SafetyInstruction from "./components/safetyInstruction/safetyInstruction";
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import { browserHistory } from "react-router";
 import "./index.css";
 
 const Index = () => {
   return (
     <Router>
-        <Switch>
-            <Route exact path="/" component={signIn} />
-            <Route exact path="/viewdetails" component={ticketDetails} />
-            {/* <Route path="/safetyinstructions" component={safetyInstruction} />
-            <Route path="/boardingpass" component={boardingPass} />
+        <Switch history={browserHistory}>
+            <Route path="/" exact component={SignIn} />
+            <Route path="/viewdetails" exact component={TicketDetails} />
+            <Route path="/safetyinstructions" exact component={SafetyInstruction} />
+            {/* <Route path="/boardingpass" component={boardingPass} />
             <Route component={Notfound} /> */}
         </Switch>
     </Router> 
