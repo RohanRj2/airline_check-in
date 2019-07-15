@@ -1,0 +1,10 @@
+.person-checklist-item>label,.person-checklist-item>input[type="checkbox"],.person-checklist-item>input[type="checkbox"]:checked{
+    display: inline-block;
+    vertical-align: middle;
+}
+.person-checklist-item>input[type="checkbox"],.person-checklist-item>input[type="checkbox"]:checked{
+    padding: 5px;
+    width: 20px;
+    height: 20px;
+    float:right;
+}

@@ -58,9 +58,8 @@ class Signin extends React.Component {
 
     render() {
         return (
-            <div>
-                
-                {this.state.isError && <div className="error">{this.state.errorMessage}</div>}
+            <div className="signin-form">
+                {this.state.isError && <div className="error"><p>{this.state.errorMessage}</p></div>}
                 <form method="post" action={`${config.host}${config.location}${config.checkConfirmation}`} onSubmit={(event) => {
                     this.submitHandler(event);
                 }}>

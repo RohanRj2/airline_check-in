@@ -1,0 +1,15 @@
+
+.ticket-details{
+    background: rgba(0, 151, 19, 0.1);
+    margin: 10px 5px auto 5px;
+}
+.next-btn {
+    padding: 4px 4px 4px 4px;
+    width: 100%;
+    background-color: blue;
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 16px;
+    line-height: 16px;
+}

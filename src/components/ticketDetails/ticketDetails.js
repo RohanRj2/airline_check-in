@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import config from "../../config";
+import "./ticketDetails.css";
 import PersonCard from "./personCard/personCard";
 import FlightDetails from "./flightDetails/flightDetails";
 import { withRouter } from 'react-router';
@@ -44,7 +45,7 @@ class TicketDetails extends React.Component {
     render() {
         console.log(this.state.selectedSeats);
         return (
-            <div>
+            <div className="ticket-details">
                 <div>{
                     this.state.details.flightDetails && <FlightDetails details={this.state.details.flightDetails} />
                         }
@@ -60,7 +61,7 @@ class TicketDetails extends React.Component {
                                 )
                             })
                         }
-                        <button type='submit'>Submit</button>
+                        <button type='submit' class="next-btn">Submit</button>
                     </form>
             </div>
                 );

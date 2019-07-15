@@ -104,7 +104,7 @@ router.post('/submitCheckin', (req, res, next) => {
 
         fs.writeFile(path.join(__dirname, 'db.json'), JSON.stringify(newData), err => {
             if(!err) {
-                res.send({"isConfirmationSuccess": true});
+                res.send({"isConfirmationSuccess": true,"checkinData":newData.tickets[requestTicketIndex]});
             }
         });
 

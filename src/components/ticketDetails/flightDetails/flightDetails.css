@@ -1,0 +1,11 @@
+div.flight-details-container.flight-details-list {
+    background: #f18053;
+    padding: 5px 5px 5px auto;
+}
+.flight-details>span:nth-of-type(1) {
+    font-weight : 700;
+}
+.flight-details>span:nth-of-type(2) {
+    font-weight : 600;
+    text-decoration: underline;
+}
